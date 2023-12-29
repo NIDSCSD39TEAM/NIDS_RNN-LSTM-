@@ -1,5 +1,5 @@
 
-# Network Intrusion Detection Systems (NIDS) with RNN-LSTM
+# Detecting Network Intrusion Anomalies withRNN(LSTM)-Based Deep Learning Models
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
