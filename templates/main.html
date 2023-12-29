@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>intrusion detection</title>
+     <style>
+          .showcase {
+           background-size: cover;
+           background-position: center;
+           color: #ffffff;
+           padding: 10px;
+           box-shadow: 10px 5px 10px 5px lightblue;
+
+           border-bottom: 5px solid transparent; /* Add a border for a 3D effect */
+       }
+       .post-title{
+           animation: shake-it 0.5s reverse infinite
+               cubic-bezier(0.68, -0.55, 0.27, 1.55);
+       }
+       
+       
+       @keyframes shake-it {
+           0% {
+               text-shadow: 0 0 rgba(0, 255, 255, 0.5), 0 0 rgba(255, 0, 0, 0.5);
+           }
+           25% {
+               text-shadow: -2px 0 rgba(0, 255, 255, 0.5), 2px 0 rgba(255, 0, 0, 0.5);
+           }
+           50% {
+               text-shadow: -5px 0 rgba(0, 255, 255, 0.5), 3px 0 rgba(255, 0, 0, 0.5);
+           }
+           100% {
+               text-shadow: 3px 0 rgba(0, 255, 255, 0.5), 5px 0 rgba(255, 0, 0, 0.5);
+           }
+       }
+
+    
+       .li
+    {
+        position: relative;
+        display: inline-block;
+        padding:15px;
+        margin:0px;
+        color: #000000;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.9s;
+        /* letter-spacing: 2px; */
+        overflow: hidden;
+ 
+    
+    }
+    .li:hover
+    {
+        background: #03e9f4;
+        color: #050801;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+        -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    
+    } 
+    
+    .li span
+    {
+        position: absolute;
+        display:block;
+    }
+    .li span:nth-child(1)
+    {
+        top:0;
+        left:0;
+        width:100%;
+        height:2px;
+        background: linear-gradient(90deg, transparent,red);
+        animation: animate1 1s linear infinite;
+    }
+    @keyframes animate1 
+    {
+        0%{left:-100%;}
+        50%,100%{left:100%;}
+    }
+    .li span:nth-child(2)
+    {
+        top:-100%;
+        right:0;
+        width:2px;
+        height:100%;
+        background: linear-gradient(180deg, transparent,blue);
+        animation: animate2 1s linear infinite;
+        animation-delay: 0.25s;
+    }
+    @keyframes animate2 
+    {
+        0%{top:-100%}
+        50%, 100%{top:100%;}
+    }
+    .li span:nth-child(3)
+    {
+        bottom:0;
+        right:0;
+        width:100%;
+        height:2px;
+        background: linear-gradient(270deg, transparent,green);
+        animation: animate3 1s linear infinite;
+        animation-delay: 0.5s;
+    }
+    @keyframes animate3 
+    {
+        0%{right:-100%}
+        50%, 100%{right:100%;}
+    }
+    .li span:nth-child(4)
+    {
+        bottom:-100%;
+        left:0;
+        width:2px;
+        height:100%;
+        background: linear-gradient(360deg, transparent,pink);
+        animation: animate4 1s linear infinite;
+        animation-delay: 0.75s;
+        /* border-radius:20px; */
+    }
+    @keyframes animate4 
+    {
+        0%{bottom:-100%}
+        50%, 100%{bottom:100%;}
+    }
+
+       .feat{
+        text-shadow: 4px 4px 12px rgb(0, 234, 255);
+       }
+
+    
+       :root {
+  --dark-blue: #1c0c33;
+  --hot-pink: #fa243c;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
+
+
+
+a.collision {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  display: block;
+  height: 70px;
+  width: 200px;
+  overflow: hidden;
+  line-height: 70px;
+  text-align: center;
+  position: relative;
+}
+
+a.collision::before,
+a.collision::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: var(--hot-pink);
+  top: 50%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+a.collision::before {
+  transform: translate(-50%, -50%);
+  left: -20px;
+}
+
+a.collision::after {
+  transform: translate(50%, -50%);
+  right: -20px;
+}
+
+a.collision:hover::before {
+  animation: move-left .8s both;
+  animation-direction: alternate;
+}
+a.collision:hover::after {
+  animation: move-right .8s both;
+  animation-direction: alternate;
+}
+
+@keyframes move-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@keyframes move-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    height: 400px;
+    width: 400px;
+  }
+}
+.foot{
+
+padding: 50px;
+color: rgb(139, 139, 139);
+font-size: 13px;
+width: 80%;
+text-align: left;
+margin-left: 20px;
+}
+.ft{
+text-decoration: none;
+color: rgb(139, 139, 139);
+}
+.fa {
+padding: 10px;
+font-size: 10px;
+width: 30px;
+text-align: center;
+text-decoration: none;
+margin: 5px 2px;
+border-radius: 50%;
+}
+
+.fa:hover {
+opacity: 0.7;
+}
+
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+.fa-instagram {
+background: #125688;
+color: white;
+}
+.fa-twitter {
+background: #55ACEE;
+color: white;
+}
+.fa-linkedin {
+background: #007bb5;
+color: white;
+}   
+.ft{
+text-decoration: none;
+color: rgb(139, 139, 139);
+}  
+.ft:hover{
+color: white;
+}
+    </style>
+<!--
+
+Template 2098 Health
+
+http://www.tooplate.com/view/2098-health
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/font-awesome.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/animate.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/owl.carousel.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/owl.theme.default.min.css')}}">
+
+     <link rel="stylesheet" href="{{url_for('static',filename='css/tooplate-style.css')}}">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section>
+
+                    <ul   style="list-style-type:none;  
+                    margin:0;  
+                    padding-top:10px;  
+                    overflow:hidden;  
+                    position: relative;top: 10px;
+                    background-color:transparent;"  >
+                    <a href="{{ url_for('main') }}"  style="color: black;font-weight: bold;background-color: lightblue;" class="li">DoS<span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span></a>
+                    <a href="{{ url_for('Probe') }}" style="color: black;font-weight: bold;background-color: lightblue;" class="li"><span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>Probe</a>
+                    <a href="{{ url_for('R2L') }}"   style="color: black;font-weight: bold;background-color: lightblue;" class="li"><span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>R2L</a>
+                    <a href="{{ url_for('U2R') }}"   style="color: black;font-weight: bold;background-color: lightblue;" class="li"><span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>U2R</a>
+                        <a href="{{ url_for('index') }}"   style="color: black;font-weight: bold;background-color: lightblue; float: right; margin-right: 20px;" class="li"><span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>Log out</a>
+                    </ul>
+     </section>
+
+
+      <section id="home" class="slider" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                         <div class="owl-carousel owl-theme">
+                              <div class="item item-first">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <div class="showcase">
+                                                  <div class="container">
+                                                      <div class="row">
+                                                          <div class="col-12 text-center">
+                                                              <h1 style="position: relative;"><b><span class="post-title"><center>Anomaly Based Intrusion Detection</center></span></b></h1>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                             <a href="https://www.perkins.com/en_GB/resources/meet-our-experts.html" class="section-btn btn btn-default smoothScroll">Meet Our Experties</a>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="item item-second">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <div class="showcase">
+                                                  <div class="container">
+                                                      <div class="row">
+                                                          <div class="col-12 text-center">
+                                                              <h1 style="position: relative;"><b><span class="post-title"><center>Anomaly Based Intrusion Detection</center></span></b></h1>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                             <a href="https://www.imperva.com/company/about/" class="section-btn btn btn-default btn-gray smoothScroll">More About Us</a>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="item item-third">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <div class="showcase">
+                                                  <div class="container">
+                                                      <div class="row">
+                                                          <div class="col-12 text-center">
+                                                              <h1 style="position: relative;"><b><span class="post-title"><center>Anomaly Based Intrusion Detection</center></span></b></h1>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                             <a href="https://www.instagram.com/nidscompany966/" class="section-btn btn btn-default btn-blue smoothScroll">Contact Us</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+               </div>
+          </div>
+     </section>
+
+
+
+     <!-- MAKE AN APPOINTMENT -->
+<table width="100%" style="position:relative;bottom:120px">
+     <tr>
+          <td>
+            <h4  style="position: relative;bottom: 100px;left: 80px;">Precautions</h4>
+        <p> <table style="width: 200%; position: relative;bottom: 80px;left: 80px;">
+            <tr>
+                <td><span style="color: red;"><b>Network Segmentation</b></span></td>
+                <td><span style="color: white;">Segmenting networks into smaller, more manageable pieces, can limit the impact of a DoS attack. This can be done by creating VLANs, and firewalls can limit the spread of an attack.</span></td>
+            </tr>
+            <tr>
+                <td><span style="color: red;"><b>Load balancing </b></span></td>
+                <td><span style="color: white;">Distributing traffic across multiple servers, a DoS attack can be prevented from overwhelming a single server or resource. Load balancing can be achieved using hardware or software solutions.</span></td>
+            </tr>
+            <tr>
+                <td><span style="color: red;"><b>IP blocking</b></span></td>
+                <td><span style="color: white;">Blocking traffic from known or suspected malicious sources can prevent DoS traffic from reaching its target.</span></td>
+            </tr>
+            <tr>
+                <td><span style="color: red;"><b>Rate limiting</b></span></td>
+                <td><span style="color: white;">Limiting the rate of traffic to reach a server or resource can prevent a DoS attack from overwhelming it.</span></td>
+            </tr>
+            <tr>
+                <td><span style="color: red;"><b>Content Delivery Networks (CDNs)</b></span></td>
+                <td><span style="color: white;">Distributing website content across multiple locations makes it more difficult for an attack to bring down an entire site.</span></td>
+            </tr>
+        </table></p></td>
+          <td>     <section id="appointment" data-stellar-background-ratio="3">
+               <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                         </div>
+     
+               
+                         <div class="col-md-6 col-sm-6">
+                              <!-- CONTACT FORM HERE -->
+                              <form id="appointment-form" role="form" method="post" action="{{ url_for('analyze')}}">
+     
+                                   <!-- SECTION TITLE -->
+                                   <div class="feat" data-wow-delay="0.4s">
+                                        <h2>Features for DoS</h2>
+                                   </div>
+     
+                                   <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                          
+                                                
+                                        <div class="col-md-12 col-sm-12">
+                                             <label>logged_in</label>
+                                             <input class="form-control" placeholder="Enter logged_in" name="logged_in" type="text">
+                                         </div>
+         
+                                         <div class="col-md-12 col-sm-12">
+                                             <label>rerror_rate</label>
+                                             <input class="form-control" placeholder="Enter rerror_rate" name="rerror_rate" type="text">
+                                         </div>
+         
+                                         <div class="col-md-12 col-sm-12">
+                                             <label>srv_rerror_rate</label>
+                                             <input class="form-control" placeholder="Enter srv_rerror_rate" name="srv_rerror_rate" type="text">
+                                         </div>
+         
+                                         <div class="col-md-12 col-sm-12">
+                                             <label>dst_host_srv_count</label>
+                                             <input class="form-control" placeholder="Enter dst_host_srv_count" name="dst_host_srv_count" type="text">
+                                         </div>
+         
+                                         <div class="col-md-12 col-sm-12">
+                                             <label>dst_host_diff_srv_rate</label>
+                                             <input class="form-control" placeholder="Enter dst_host_diff_srv_rate" name="dst_host_diff_srv_rate" type="text">
+                                         </div>
+         
+                                         <div class="col-md-12 col-sm-12">
+                                             <label>dst_host_same_src_port_rate</label>
+                                             <input class="form-control" placeholder="Enter dst_host_same_src_port_rate" name="dst_host_same_src_port_rate" type="text">
+                                         </div>
+     
+                                         <div class="col-md-12 col-sm-12">
+                                             <label>dst_host_srv_diff_host_rate</label>
+                                             <input class="form-control" placeholder="Enter dst_host_srv_diff_host_rate" name="dst_host_srv_diff_host_rate" type="text">
+                                         </div>
+         
+                                         <div class="col-md-12 col-sm-12">
+                                             <label>dst_host_rerror_rate</label>
+                                             <input class="form-control" placeholder="Enter dst_host_rerror_rate" name="dst_host_rerror_rate" type="text">
+                                         </div>
+         
+                                         <div class="col-md-12 col-sm-12">
+                                             <label>dst_host_srv_rerror_rate</label>
+                                             <input class="form-control" placeholder="Enter dst_host_srv_rerror_rate" name="dst_host_srv_rerror_rate" type="text">
+                                         </div>
+         
+                                         <div class="col-md-12 col-sm-12">
+                                             <label>Protocol_type_icmp</label>
+                                             <input class="form-control" placeholder="Enter Protocol_type_icmp" name="Protocol_type_icmp" type="text">
+                                         </div>
+         
+                                         <div class="col-md-12 col-sm-12">
+                                             <label>service_eco_i</label>
+                                             <input class="form-control" placeholder="Enter service_eco_i" name="service_eco_i" type="text">
+                                         </div>
+         
+                                         <div class="col-md-12 col-sm-12">
+                                             <label>service_private</label>
+                                             <input class="form-control" placeholder="Enter service_private" name="service_private" type="text">
+                                         </div>
+         
+                                         <div class="col-md-12 col-sm-12">
+                                             <label>flag_SF</label>
+                                             <input class="form-control" placeholder="Enter flag_SF" name="flag_SF" type="text">
+                                         </div>
+                                               
+                                             <button type="submit" class="form-control" id="cf-submit" name="submit">Submit</button>
+                                       
+                                   </div>
+                             </form>
+                         </div>
+     
+                         
+                              
+                              
+                              
+     
+                    </div>
+                         
+               </div>
+          </section></td>
+     </tr>
+</table>
+
+<div style="background-color: rgb(32, 32, 32); margin-right:-7px;margin-left:-7px;margin-bottom:-8px;">
+    <footer>
+        <table class="foot">
+            <tr>
+                <td>Services</td>
+                <td>Social Media</td>
+                <td>About Us</td>
+            </tr>
+            <tr>
+                <td><a class="ft" href="/front/DOS.html">DoS</a></td>
+                <td><a href="https://www.facebook.com/" class="fa fa-facebook"></a></td>
+                <td>Contact Us</td>
+            </tr>
+            <tr>
+                <td><a class="ft" href="/front/Probe.html">Probe</a></td>
+                <td><a  href="https://twitter.com/i/flow/login" class="fa fa-twitter"></a></td>
+                <td><a class="ft" href="#">+91 1234056789</a></td>
+            </tr>
+            <tr>
+                <td><a class="ft" href="/front/R2l.html">R2L</a></td>
+                <td><a href="https://www.instagram.com/nidscompany966/" class="fa fa-instagram"></a></td>
+                <td><a class="ft" href="#">www.companynids@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td><a class="ft" href="/front/U2R.html">U2R</a></td>
+                <td><a  href="https://in.linkedin.com/" class="fa fa-linkedin"></a></td>
+            </tr>
+        </table>
+        <p style="text-align: center; margin-bottom:0%;color:rgb(139, 139, 139)" class="final">&copy; Network Intrusion Detection</p>
+
+    </footer>
+</div>
+
+
+     <!-- SCRIPTS -->
+     <script src="{{url_for('static',filename='js/jquery.js')}}"></script>
+     <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/jquery.sticky.js')}}"></script>
+     <script src="{{url_for('static',filename='js/jquery.stellar.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/wow.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/smoothscroll.js')}}"></script>
+     <script src="{{url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/custom.js')}}"></script>
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/front/icon2/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/front/icon2/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/front/icon2/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/front/footer.css">
+    <link rel="script" href="/front/log.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Network Intrusion Detection</title>
+    <style>
+        * {
+            background-image: url('/intrusion/templates/front/back.png');
+            text-align: center;
+
+        }
+
+        .showcase {
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 20px;
+            border-bottom: 5px solid transparent; /* Add a border for a 3D effect */
+        }
+
+        .login-container {
+            margin-top: 20px;
+            
+        }
+
+        .card-panel {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent white background */
+            margin-left: 30%;
+            margin-right: 30%;
+            border-radius: 50px;
+            padding: 30px;
+            box-shadow: 0px 0px 8px 8px rgba(255, 255, 255, 0.5);
+        }
+        label{
+            color: white;
+        }
+        .form-group{
+            text-align: center;
+        }
+        .fp{
+            text-decoration: none;
+            text-align: right;
+            font-size: small;
+            margin-left: 60%;
+        }
+        .btn{
+            color: rgb(0, 0, 0);
+            font-weight: bolder;
+            text-decoration: none;
+        }
+        .fp:hover{
+            color: white;
+        }
+        .button {
+            width: 130px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 50px;
+            text-align: center;
+            color: #000;
+            position: relative;
+            right: 25px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 40px;
+            cursor: pointer;
+            display: inline-block;
+          }
+        .button-1 {
+            background-color: transparent;
+            border: 3px solid #00d7c3;
+            border-radius: 50px;
+            -webkit-transition: all .15s ease-in-out;
+            transition: all .15s ease-in-out;
+            color: #00d7c3;
+          }
+          .button-1:hover {
+            box-shadow: 0 0 10px 0 #00d72f inset, 0 0 20px 2px #00d72f;
+            border: 3px solid #00d72f;
+            background-color: #00d72f;
+            color: rgb(0, 0, 0);
+          }
+          .form-control{
+            border-radius: 20px;
+            border: 1px solid gray;
+            padding: 5px;
+            font-weight: bolder;
+          }
+          .post-title{
+            font-size: xxx-large;
+            animation: shake-it 0.5s reverse infinite
+                cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            
+        }
+        
+        
+        @keyframes shake-it {
+            0% {
+                text-shadow: 0 0 rgba(0, 255, 255, 0.5), 0 0 rgba(255, 0, 0, 0.5);
+            }
+            25% {
+                text-shadow: -2px 0 rgba(0, 255, 255, 0.5), 2px 0 rgba(255, 0, 0, 0.5);
+            }
+            50% {
+                text-shadow: -5px 0 rgba(0, 255, 255, 0.5), 3px 0 rgba(255, 0, 0, 0.5);
+            }
+            100% {
+                text-shadow: 3px 0 rgba(0, 255, 255, 0.5), 5px 0 rgba(255, 0, 0, 0.5);
+            }
+        }
+        .foot{
+        margin-top: 180px;
+        padding: 40px;
+        color: rgb(139, 139, 139);
+        font-size: 13px;
+        width: 80%;
+        text-align: left;
+        margin-left: 20px;
+    }
+    .ft{
+        text-decoration: none;
+        color: rgb(139, 139, 139);
+      }
+      .fa {
+    padding: 10px;
+    font-size: 10px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }   
+  .ft{
+    text-decoration: none;
+    color: rgb(139, 139, 139);
+  }  
+  .ft:hover{
+    color: white;
+  }
+  
+    </style>
+    <script>
+        function validateLogin() {
+          var username = document.getElementById('username').value;
+          var password = document.getElementById('password').value;
+    
+          if (username === 'admin' && password === 'presidency') {
+            window.location.href = 'main.html';
+          } else {
+            alert('Invalid username or password. Please try again.');
+            window.location.href = 'index.html';
+          }
+        }
+      </script>
+</head>
+<body style="margin-top: 0px;">
+  <center>
+    {% extends "material/base.html" %}
+  {% block content %}
+  
+  {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          {% for message in messages %}
+       <span>{{ message }}</span>
+          {% endfor %}
+      {% endif %}
+  {% endwith %}
+
+<div style="position: relative; bottom: 32px;">
+    <div class="container">
+        <div class="row">
+          <img src="https://static.vecteezy.com/system/resources/previews/008/289/223/non_2x/security-logo-design-template-isoalted-on-black-color-background-metal-shield-and-wings-element-logo-concept-vector.jpg" style="width: 10%;float: left;position: relative; right: 200px;bottom: 10px;">
+            <div class="col-12 text-center">
+                <h1 style="position: relative;right:100px;top: 10px;"><b><span class="post-title" style="color:#510400 ;"><center>Network Intrusion Detection</center></span></b></h1>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<centter>
+  
+<div style="background-position: url(https://videohive.img.customer.envatousercontent.com/ec332d8e-e812-45f4-8ba7-244542ef2088/video_preview/video_preview_0000.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=79897068dbdbac9a327908949f06bae6); position: relative; bottom: 52px;">
+
+  <section class="section section-signup" style="background-image: url(https://media.istockphoto.com/id/1218890568/vector/abstract-technological-background.jpg?s=612x612&w=0&k=20&c=MFHNEsSYaskyUmnCF__aSzqXGS7HMgFg_T9DHtQHTHM=);background-repeat:no-repeat;background-size:cover;">
+          <div >
+            <div class="row">
+              
+              <center style="margin-left:600px;" >
+                <h2 style="color:rgb(255, 255, 255);font-size: xx-large;margin-left:300px;text-shadow:2px 5px 10px darkblue;font-weight:bolder;">Welcome User! Enter your credentials</h2> 
+              <div class="col s12 m4" style="margin-left: 500px;padding-top:20px ; box-shadow:2px 2px 10px darkblue">
+                
+                <div  class="card-panel grey lighten-4 grey-text text-darken-4 z-depth-0">
+  
+                    <form action="{{ url_for('login')}}" method="POST" style="text-align: left; padding-top: 20px;padding-bottom: 50px;">
+  
+                      <h5 style=" font-weight: bold;">Login</h5>
+                      
+                      <div class="input-field">
+                       <p class="range-field">
+                            <input type="text" id="age" name="id" style="text-align: left;" > 
+                        <label for="">User Name</label>
+                      </div>
+                       <div class="input-field">
+                       <p class="range-field">
+                            <input type="password" id="age" name="pass" style=" text-align: left;" > 
+                        <label for="">Password</label>
+                      </div>
+                      <center><input type="submit" value="Login" class="form-control" style="padding-left: 20px;padding-right: 20px;"></center>
+               
+                    </form>
+                  
+                </div>
+              </div>
+            </center>
+            </div>
+          
+                
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </section>
+  
+      </div>
+  
+  
+        {% endblock%}
+  
+        {% block scripts %}
+        {{super()}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <!-- Compiled and minified JavaScript -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+        <!-- <script type="text/javascript">
+             document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, options);
+          });
+        </script> -->
+        
+        <script>
+            // Or with jQuery
+        
+          $(document).ready(function(){
+            $('select').formSelect();
+          });
+        </script>
+</center>
+      
+
+<div style="background-color: rgb(32, 32, 32); margin-right:-7px;margin-left:-7px;margin-bottom:-2px;margin-top: -130px;">
+    <footer>
+        <table class="foot">
+            <tr>
+                <td>Services</td>
+                <td>Social Media</td>
+                <td>About Us</td>
+            </tr>
+            <tr>
+                <td><a class="ft" href="/front/DOS.html">DoS</a></td>
+                <td><a href="https://www.facebook.com/" class="fa fa-facebook"></a></td>
+                <td>Contact Us</td>
+            </tr>
+            <tr>
+                <td><a class="ft" href="/front/Probe.html">Probe</a></td>
+                <td><a  href="https://twitter.com/i/flow/login" class="fa fa-twitter"></a></td>
+                <td><a class="ft" href="#">+91 1234056789</a></td>
+            </tr>
+            <tr>
+                <td><a class="ft" href="/front/R2l.html">R2L</a></td>
+                <td><a href="https://www.instagram.com/nidscompany966/" class="fa fa-instagram"></a></td>
+                <td><a class="ft" href="#">www.companynids@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td><a class="ft" href="/front/U2R.html">U2R</a></td>
+                <td><a  href="https://in.linkedin.com/" class="fa fa-linkedin"></a></td>
+            </tr>
+        </table>
+        <p style="text-align: center; margin-bottom:0%;color:rgb(139, 139, 139)" class="final">&copy; Network Intrusion Detection</p>
+
+    </footer>
+</div>
+
+{% endblock %}
+</center>
+</body>
+</html>

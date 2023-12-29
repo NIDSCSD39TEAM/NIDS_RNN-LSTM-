@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>intrusion detection</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <link rel="stylesheet" href="/front/footer.css">
+     <link rel="apple-touch-icon" sizes="180x180" href="/front/icon2/apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="/front/icon2/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="/front/icon2/favicon-16x16.png">
+     <link rel="manifest" href="/site.webmanifest">
+     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+     <meta name="msapplication-TileColor" content="#da532c">
+     <meta name="theme-color" content="#ffffff">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <style>
+        body{
+            margin: 0%;
+            background-image: url(/front/Untitled\ design\ \(2\).png);
+        }
+        .li{
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            margin-top:40px ;
+            padding-left: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 50px;
+        }
+        .li:hover{
+            background-color: rgb(138, 30, 30);
+        }
+        .hea{
+            text-align: center;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-weight: bold;
+            font-size: xx-large;
+            padding: 6px;
+        }
+        nav{
+            text-decoration: none;
+            position: relative;
+            bottom: 20px;
+        }
+        .navi{
+            width: 100%;
+        }
+        .for{
+            width: 50%;
+            color: white    ;
+        }
+        .con{
+            margin-left: 30%;
+            margin-top: 4%;
+        }
+        .btn{
+            background-color: transparent;
+            border: none;
+            margin-left: 50px;
+        }
+    .li
+    {
+        position: relative;
+        display: inline-block;
+        padding:25px 15px;
+        margin:20px 10px;
+        color: #03e9f4;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.9s;
+        /* letter-spacing: 2px; */
+        overflow: hidden;
+        margin-right:20px;
+    
+    }
+    .li:hover
+    {
+        background: #03e9f4;
+        color: #050801;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+        -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    
+    } 
+    .li:nth-child(1)
+    {
+        filter:hue-rotate(180deg);
+    }
+    .li:nth-child(2)
+    {
+        filter:hue-rotate(110deg);
+    }
+    .li:nth-child(3)
+    {
+        filter:hue-rotate(200deg);
+    }
+    .li:nth-child(4)
+    {
+        filter:hue-rotate(270deg);
+    }
+    .li:nth-child(5)
+    {
+        filter:hue-rotate(240deg);
+    }
+    .li:nth-child(6)
+    {
+        filter:hue-rotate(186deg);
+    }
+    .li span
+    {
+        position: absolute;
+        display:block;
+    }
+    .li span:nth-child(1)
+    {
+        top:0;
+        left:0;
+        width:100%;
+        height:2px;
+        background: linear-gradient(90deg, transparent,red);
+        animation: animate1 1s linear infinite;
+    }
+    @keyframes animate1 
+    {
+        0%{left:-100%;}
+        50%,100%{left:100%;}
+    }
+    .li span:nth-child(2)
+    {
+        top:-100%;
+        right:0;
+        width:2px;
+        height:100%;
+        background: linear-gradient(180deg, transparent,blue);
+        animation: animate2 1s linear infinite;
+        animation-delay: 0.25s;
+    }
+    @keyframes animate2 
+    {
+        0%{top:-100%}
+        50%, 100%{top:100%;}
+    }
+    .li span:nth-child(3)
+    {
+        bottom:0;
+        right:0;
+        width:100%;
+        height:2px;
+        background: linear-gradient(270deg, transparent,green);
+        animation: animate3 1s linear infinite;
+        animation-delay: 0.5s;
+    }
+    @keyframes animate3 
+    {
+        0%{right:-100%}
+        50%, 100%{right:100%;}
+    }
+    .li span:nth-child(4)
+    {
+        bottom:-100%;
+        left:0;
+        width:2px;
+        height:100%;
+        background: linear-gradient(360deg, transparent,pink);
+        animation: animate4 1s linear infinite;
+        animation-delay: 0.75s;
+        /* border-radius:20px; */
+    }
+    @keyframes animate4 
+    {
+        0%{bottom:-100%}
+        50%, 100%{bottom:100%;}
+    }
+    .foot{
+        margin-top: 180px;
+        padding: 40px;
+        color: rgb(139, 139, 139);
+        font-size: 13px;
+        width: 80%;
+        text-align: left;
+    }
+    .fa {
+        padding: 10px;
+        font-size: 10px;
+        width: 10px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+      }
+      
+      .fa:hover {
+          opacity: 0.7;
+      }
+      
+      .fa-facebook {
+        background: #3B5998;
+        color: white;
+      }
+      .fa-instagram {
+        background: #125688;
+        color: white;
+      }
+      .fa-twitter {
+        background: #55ACEE;
+        color: white;
+      }
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }   
+      .ft{
+        text-decoration: none;
+        color: rgb(139, 139, 139);
+      }   
+      .fr:hover{
+        color: white;
+      }
+      .post-title{
+        animation: shake-it 0.5s reverse infinite
+            cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+    
+    @keyframes shake-it {
+        0% {
+            text-shadow: 0 0 rgba(0, 255, 255, 0.5), 0 0 rgba(255, 0, 0, 0.5);
+        }
+        25% {
+            text-shadow: -2px 0 rgba(0, 255, 255, 0.5), 2px 0 rgba(255, 0, 0, 0.5);
+        }
+        50% {
+            text-shadow: -5px 0 rgba(0, 255, 255, 0.5), 3px 0 rgba(255, 0, 0, 0.5);
+        }
+        100% {
+            text-shadow: 3px 0 rgba(0, 255, 255, 0.5), 5px 0 rgba(255, 0, 0, 0.5);
+        }
+    }
+     </style>
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+    <img style="float: left; background-color:transparent; width:50px;" src="/front/3.png">
+<img style="float: right; background-color:transparent; width:40px; position:relative; right:5px;top:5px;" src="/front/4.png">
+
+    <div class="hea"><span class="post-title">Network Intrusion Detection</span></div>
+<table class="navi">
+    <th>
+        <td>
+            <nav>
+                <a style="color: White;" href="/front/DOS.html" class="li">DOs</a>
+                <a style="color: White;" href="/front/Probe.html" class="li">Probe</a>
+                <a style="color: White;" href="/front/R2l.html" class="li">R2L</a>
+                <a style="color: White;" href="/front/U2R.html" class="li">U2R</a>
+             </nav>
+        </td>
+    </th>
+    <th>
+        <td style="text-align: right;">
+            <nav>
+                <a style="color: White;" href="/front/meet.html" class="li">Meet Our Experties</a>
+                <a style="color: White;" href="/front/About.html" class="li">About Us</a>
+                <a style="color: White;" href="/front/contact.html" class="li">Contact Us</a>
+             </nav>
+        </td>
+    </th>
+</table>
+
+
+
+
+
+
+     <!-- MAKE AN APPOINTMENT -->
+     <section id="appointment" data-stellar-background-ratio="3">
+        <div class="container">
+             <div class="row">
+                 <div class="col-md-6 col-sm-6">
+                  </div>
+
+        
+                  <div class="con">
+                       <!-- CONTACT FORM HERE -->
+                       <form id="appointment-form" role="form" method="post" action="{{ url_for('analyze')}}">
+
+                            <!-- SECTION TITLE -->
+                            <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                                 <h2 style="padding-left:80px;color:white;">Enter Input Features For U2R</h2>
+                            </div>
+
+                            <div class="wow fadeInUp" data-wow-delay="0.8s">
+                            
+                              <table class="for">
+                                  <tr>
+                                      <td>
+                                          <label>urgent</label>
+                                      </td>
+                                      <td>
+                                          <input class="form-control" placeholder="Enter urgent" name="logged_in" type="text">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <label>hot</label>
+                                      </td>
+                                      <td>
+                                          <input class="form-control" placeholder="Enter hot" name="rerror_rate" type="text">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <label>srv_rerror_rate</label>
+                                      </td>
+                                      <td>
+                                          <input class="form-control" placeholder="Enter srv_rerror_rate" name="srv_rerror_rate" type="text">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <label>root_shell</label>
+                                      </td>
+                                      <td>
+                                          <input class="form-control" placeholder="Enter root_shell" name="dst_host_srv_count" type="text">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <label>num_file_creations</label>
+                                      </td>
+                                      <td>
+                                          <input class="form-control" placeholder="Enter num_file_creations" name="dst_host_diff_srv_rate" type="text">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <label>num_shells</label>
+                                      </td>
+                                      <td>
+                                          <input class="form-control" placeholder="Enter num_shells" name="dst_host_same_src_port_rate" type="text">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <label>srv_diff_host_rate</label>
+                                      </td>
+                                      <td>
+                                          <input class="form-control" placeholder="Enter srv_diff_host_rate" name="dst_host_srv_diff_host_rate" type="text">
+
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <label>dst_host_count</label>
+                                      </td>
+                                      <td>
+                                          <input class="form-control" placeholder="Enter dst_host_count" name="dst_host_rerror_rate" type="text">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <label>dst_host_srv_count</label>
+                                      </td>
+                                      <td>
+                                          <input class="form-control" placeholder="Enter dst_host_srv_count" name="dst_host_srv_rerror_rate" type="text">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <label>dst_host_same_src_port_rate</label>
+                                      </td>
+                                      <td>
+                                          <input class="form-control" placeholder="Enter dst_host_same_src_port_rate" name="Protocol_type_icmp" type="text">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <label>dst_host_srv_diff_host_rate</label>
+                                      </td>
+                                      <td>
+                                          <input class="form-control" placeholder="Enter dst_host_srv_diff_host_rate" name="service_eco_i" type="text">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <label>service_ftp_data</label>
+                                      </td>
+                                      <td>
+                                          <input class="form-control" placeholder="Enter service_ftp_data" name="service_private" type="text">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <label>service_http</label>
+                                      </td>
+                                      <td>
+                                          <input class="form-control" placeholder="Enter service_http" name="flag_SF" type="text">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <label>service_telnet</label>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" placeholder="Enter service_telnet" name="flag_SF" type="text">
+                                    </td>
+                                </tr>
+                              </table>  
+                              <table class="btn">
+                                <tr>
+                                    <td style="text-align:center">
+                                        <button type="submit" class="btn" id="cf-submit" name="submit" ><a href="/front/result4.html" style="color: white; font-weight:bolder" class="li">Submit</a></button>
+                                    </td>
+                                    <td style="text-align: left; position:relative;right:40px">
+                                        <button type="reset" class="btn" id="cf-submit" name="submit" ><a href="/front/U2R.html" style="color: white; font-weight:bolder" class="li">Reset</a></button>
+                                    </td>
+                                </tr>
+                            </table>   
+                              
+                                
+                            </div>
+                      </form>
+                  </div>
+
+                  
+                  
+                  
+                  
+
+             </div>
+               
+        </div>
+   </section>
+
+
+
+
+<div style="background-color: rgb(32, 32, 32);">
+    <footer>
+        <table class="foot">
+            <tr>
+                <td>Services</td>
+                <td>Social Media</td>
+                <td>About Us</td>
+            </tr>
+            <tr>
+                <td><a class="ft" href="/front/DOS.html">DoS</a></td>
+                <td><a href="#" class="fa fa-facebook"></a></td>
+                <td>Contact Us</td>
+            </tr>
+            <tr>
+                <td><a class="ft" href="/front/Probe.html">Probe</a></td>
+                <td><a  href="#" class="fa fa-twitter"></a></td>
+                <td><a class="ft" href="#">+91 1234056789</a></td>
+            </tr>
+            <tr>
+                <td><a class="ft" href="/front/R2l.html">R2L</a></td>
+                <td><a href="#" class="fa fa-instagram"></a></td>
+                <td><a class="ft" href="#">www.example@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td><a class="ft" href="/front/U2R.html">U2R</a></td>
+                <td><a  href="#" class="fa fa-linkedin"></a></td>
+            </tr>
+        </table>
+        <p style="text-align: center; margin-bottom:0%;color:rgb(139, 139, 139)" class="final">&copy; Network Intrusion Detection</p>
+
+    </footer>
+</div>
+
+     <!-- SCRIPTS -->
+     <script src="{{url_for('static',filename='js/jquery.js')}}"></script>
+     <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/jquery.sticky.js')}}"></script>
+     <script src="{{url_for('static',filename='js/jquery.stellar.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/wow.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/smoothscroll.js')}}"></script>
+     <script src="{{url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/custom.js')}}"></script>
+
+</body>
+</html>

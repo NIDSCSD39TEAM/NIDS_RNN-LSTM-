@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>intrusion detection</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Tooplate">
+    <link rel="stylesheet" href="/front/footer.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/front/icon2/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/front/icon2/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/front/icon2/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            margin: 0%;
+            background-image: url(/front/Untitled\ design\ \(2\).png);
+        }
+
+        .li {
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            margin-top: 40px;
+            padding-left: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 50px;
+        }
+
+        .li:hover {
+            background-color: rgb(138, 30, 30);
+        }
+
+        .hea {
+            text-align: center;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-weight: bold;
+            font-size: xx-large;
+            padding: 6px;
+        }
+
+        nav {
+            text-decoration: none;
+            position: relative;
+            bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        .btn {
+            background-color: transparent;
+            border: none;
+            margin-left: 50px;
+        }
+
+        .li {
+            position: relative;
+            display: inline-block;
+            padding: 25px 15px;
+            margin: 20px 10px;
+            color: #03e9f4;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 0.9s;
+            /* letter-spacing: 2px; */
+            overflow: hidden;
+            margin-right: 20px;
+
+        }
+
+        .li:hover {
+            background: #03e9f4;
+            color: #050801;
+            box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+        }
+
+        .li:nth-child(1) {
+            filter: hue-rotate(180deg);
+        }
+
+        .li:nth-child(2) {
+            filter: hue-rotate(110deg);
+        }
+
+        .li:nth-child(3) {
+            filter: hue-rotate(200deg);
+        }
+
+        .li:nth-child(4) {
+            filter: hue-rotate(270deg);
+        }
+
+        .li:nth-child(5) {
+            filter: hue-rotate(240deg);
+        }
+
+        .li:nth-child(6) {
+            filter: hue-rotate(186deg);
+        }
+
+        .li span {
+            position: absolute;
+            display: block;
+        }
+
+        .li span:nth-child(1) {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, red);
+            animation: animate1 1s linear infinite;
+        }
+
+        @keyframes animate1 {
+            0% {
+                left: -100%;
+            }
+
+            50%,
+            100% {
+                left: 100%;
+            }
+        }
+
+        .li span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, blue);
+            animation: animate2 1s linear infinite;
+            animation-delay: 0.25s;
+        }
+
+        @keyframes animate2 {
+            0% {
+                top: -100%
+            }
+
+            50%,
+            100% {
+                top: 100%;
+            }
+        }
+
+        .li span:nth-child(3) {
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, green);
+            animation: animate3 1s linear infinite;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes animate3 {
+            0% {
+                right: -100%
+            }
+
+            50%,
+            100% {
+                right: 100%;
+            }
+        }
+
+        .li span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, pink);
+            animation: animate4 1s linear infinite;
+            animation-delay: 0.75s;
+            /* border-radius:20px; */
+        }
+
+        @keyframes animate4 {
+            0% {
+                bottom: -100%
+            }
+
+            50%,
+            100% {
+                bottom: 100%;
+            }
+        }
+
+        .foot {
+            margin-top: 180px;
+            padding: 40px;
+            color: rgb(139, 139, 139);
+            font-size: 13px;
+            width: 80%;
+            text-align: left;
+        }
+
+        .fa {
+            padding: 10px;
+            font-size: 10px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .ft {
+            text-decoration: none;
+            color: rgb(139, 139, 139);
+        }
+
+        .fr:hover {
+            color: white;
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            margin-top: 50px;
+        }
+
+        .wrapper h1 {
+            font-family: 'Allura', cursive;
+            font-size: 52px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .team {
+            display: flex;
+            justify-content: center;
+            width: auto;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .team .team_member {
+            background: #fff;
+            margin: 5px;
+            margin-bottom: 50px;
+            width: 300px;
+            padding: 20px;
+            line-height: 20px;
+            color: black;
+            position: relative;
+        }
+
+        .team .team_member h3 {
+            color: #81c644;
+            font-size: 26px;
+            margin-top: 90px;
+        }
+
+        .team .team_member p.role {
+            color: black;
+            margin: 20px 0;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .team .team_member .team_img {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #fff;
+        }
+
+        .team .team_member .team_img img {
+            width: 150px;
+            height: 150px;
+            padding: 5px;
+        }
+
+
+
+        .ing .logo img{
+            height: 130px;
+         
+        }
+        .ing {
+            margin-top: 20px;
+            background-color: white;
+            position: relative;
+            top: 40px;
+            right: 15px;
+            width: 100vw;
+            overflow: hidden;
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+          }
+          .track {
+            padding-top: 13px;
+            padding-bottom: 13px;
+            overflow: hidden;
+            height: 100%;
+            white-space: nowrap;
+            animation: scrollText 15s 0.5s infinite linear;
+            margin: 0;
+            font-size: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 180%;
+          }
+          span {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            color: white;
+          }
+        @keyframes scrollText {
+            from {
+              transform: translateX(0%);
+            }
+            to {
+              transform: translateX(-50%);
+            }
+          }
+          .post-title{
+            animation: shake-it 0.5s reverse infinite
+                cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        
+        @keyframes shake-it {
+            0% {
+                text-shadow: 0 0 rgba(0, 255, 255, 0.5), 0 0 rgba(255, 0, 0, 0.5);
+            }
+            25% {
+                text-shadow: -2px 0 rgba(0, 255, 255, 0.5), 2px 0 rgba(255, 0, 0, 0.5);
+            }
+            50% {
+                text-shadow: -5px 0 rgba(0, 255, 255, 0.5), 3px 0 rgba(255, 0, 0, 0.5);
+            }
+            100% {
+                text-shadow: 3px 0 rgba(0, 255, 255, 0.5), 5px 0 rgba(255, 0, 0, 0.5);
+            }
+        }
+    </style>
+
+</head>
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+    <img style="float: left; background-color:transparent; width:50px;" src="/front/3.png">
+    <img style="float: right; background-color:transparent; width:40px; position:relative; right:5px;top:5px;" src="/front/4.png">
+    
+        <div class="hea"><span class="post-title">Network Intrusion Detection</span></div>
+
+
+    <table>
+        <th>
+        <td>
+            <nav>
+                <a style="color: White;" href="/front/DOS.html" class="li">DOs</a>
+                <a style="color: White;" href="/front/Probe.html" class="li">Probe</a>
+                <a style="color: White;" href="/front/R2l.html" class="li">R2L</a>
+                <a style="color: White;" href="/front/U2R.html" class="li">U2R</a>
+            </nav>
+        </td>
+        </th>
+        <th>
+        <td style="text-align: right;">
+            <nav>
+                <a style="color: White;" href="/front/meet.html" class="li">Meet Our Experties</a>
+                <a style="color: White;" href="/front/About.html" class="li">About Us</a>
+                <a style="color: White;" href="/front/contact.html" class="li">Contact Us</a>
+            </nav>
+        </td>
+        </th>
+    </table>
+
+    <div>
+        <img src="/front/Screenshot from 2023-12-19 00-52-54_cleanup.png" width="100%" height="500px"
+            style="position:relative;bottom:50px">
+        <div class="wrapper">
+            <h1 style="color: white;"><span style="border-bottom:2px solid white">Our Team</span></h1>
+            </h1>
+            <div class="team">
+                <div class="team_member">
+                    <div class="team_img">
+                        <img src="/front/ex1-modified.png" alt="Team_image">
+                    </div>
+                    <h3>Vikram Sharma</h3>
+                    <p class="role"><u>Intrusion Detection Manager</u></p>
+                    <p>Emily is the driving force behind our Intrusion Detection team. With a decade of experience in
+                        cybersecurity, her leadership ensures that our strategies are not just robust but continuously
+                        evolving. Emily's strategic vision empowers our analysts and experts to create tailored
+                        solutions that preemptively shield your networks.</p>
+                </div>
+                <div class="team_member">
+                    <div class="team_img">
+                        <img src="/front/ex2-modified.png" alt="Team_image">
+                    </div>
+                    <h3>Arjun Reddy</h3>
+                    <p class="role"><u>Intrusion Detection Analyst</u></p>
+                    <p>Alex's keen eye for detail and analytical prowess form the backbone of our threat detection
+                        initiatives. As an Intrusion Detection Analyst, he meticulously dissects data streams,
+                        identifying anomalies and potential vulnerabilities. Alex's contributions play a pivotal role in
+                        fortifying our systems against sophisticated threats.</p>
+                </div>
+                <div class="team_member">
+                    <div class="team_img">
+                        <img src="/front/ex3-modified (1).png" alt="Team_image">
+                    </div>
+                    <h3>Riya Das</h3>
+                    <p class="role"><u>Intrusion Detection Expert</u></p>
+                    <p>A seasoned expert in the field, Dr. Priya brings a wealth of knowledge in threat intelligence and
+                        behavioral analytics. Her expertise in deciphering complex attack patterns and crafting
+                        innovative defense mechanisms has earned her recognition in the cybersecurity realm. Dr. Priya's
+                        insights continually enhance our capabilities in staying ahead of emerging threats.
+                    </p>
+                </div>
+                <div class="team_member">
+                    <div class="team_img">
+                        <img src="/front//ex4-modified.png" alt="Team_image">
+                    </div>
+                    <h3>Aarav Kapoor</h3>
+                    <p class="role"><u>Network Security Specialist</u></p>
+                    <p>Jake's specialization lies in implementing and fine-tuning network security measures. With a
+                        focus on intrusion prevention, he ensures that our systems are fortified against potential
+                        breaches. Jake's proactive approach and expertise in network architecture bolster our defenses,
+                        creating resilient barriers against cyber intrusions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+       <center>
+        <h1 style="color: white;"><span style="border-bottom:2px solid white">Our Other Experts</span></h1>
+    </h1>
+       </center>
+    </div>
+
+    <div class="ing">
+        <div class="track">
+            <div class="logo"> <img src="/front/employe/e2-modified.png"> </div>
+            <div class="logo"> <img src="/front/employe/e2-modified.png"> </div>
+            <div class="logo"> <img src="/front/employe/e4-modified.png"></div>
+                <div class="logo"> <img src="/front/employe/e5-modified.png"> </div>
+                <div class="logo"> <img src="/front/employe/e6-modified.png"> </div>
+                <div class="logo"> <img src="/front/employe/e7-modified.png"> </div>
+                <div class="logo"> <img src="/front/employe/e8-modified.png"> </div>
+                <div class="logo"> <img src="/front/employe/e9-modified.png"> </div>
+                <div class="logo"> <img src="/front/employe/e10-modified.png"> </div>
+                <div class="logo"> <img src="/front/employe/ex4-modified.png"> </div>
+            </div>
+        </div>
+
+        <div style="background-color: rgb(32, 32, 32);">
+            <footer>
+                <table class="foot">
+                    <tr>
+                        <td>Services</td>
+                        <td>Social Media</td>
+                        <td>About Us</td>
+                    </tr>
+                    <tr>
+                        <td><a class="ft" href="/front/DOS.html">DoS</a></td>
+                        <td><a href="#" class="fa fa-facebook"></a></td>
+                        <td>Contact Us</td>
+                    </tr>
+                    <tr>
+                        <td><a class="ft" href="/front/Probe.html">Probe</a></td>
+                        <td><a href="#" class="fa fa-twitter"></a></td>
+                        <td><a class="ft" href="#">+91 1234056789</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="ft" href="/front/R2l.html">R2L</a></td>
+                        <td><a href="#" class="fa fa-instagram"></a></td>
+                        <td><a class="ft" href="#">www.example@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="ft" href="/front/U2R.html">U2R</a></td>
+                        <td><a href="#" class="fa fa-linkedin"></a></td>
+                    </tr>
+                </table>
+                <p style="text-align: center; margin-bottom:0%;color:rgb(139, 139, 139)" class="final">&copy; Network
+                    Intrusion Detection</p>
+
+            </footer>
+        </div>
+
+        <!-- SCRIPTS -->
+        <script src="{{url_for('static',filename='js/jquery.js')}}"></script>
+        <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/jquery.sticky.js')}}"></script>
+        <script src="{{url_for('static',filename='js/jquery.stellar.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/wow.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/smoothscroll.js')}}"></script>
+        <script src="{{url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/custom.js')}}"></script>
+
+</body>
+
+</html>
